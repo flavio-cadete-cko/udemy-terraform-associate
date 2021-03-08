@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "us-east-1"
+    region = "eu-west-1"
 }
 
 #Create an EC2 Resource Block

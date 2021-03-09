@@ -1,6 +1,6 @@
 variable "region" {
     type = string
-    default = "YOUR REGION HERE"
+    default = "eu-west-1"
 }
 
 variable "instance_type" {
@@ -10,5 +10,5 @@ variable "instance_type" {
 
 variable "image_id" {
     type = string
-    default = "YOUR AMI HERE"
+    default = "ami-0aa2b94859c32a40f"
 }

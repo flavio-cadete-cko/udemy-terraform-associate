@@ -1,6 +1,6 @@
 #Provider block
 provider "aws" {
-    region = "YOUR REGION HERE"
+    region = "eu-west-1"
 }
 
 #Your S3 Bucket code

@@ -1,6 +1,6 @@
 variable "region" {
     type = string
-    default = "YOUR REGION HERE"
+    default = "eu-west-1"
 }
 
 variable "instance_type" {

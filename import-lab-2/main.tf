@@ -1,6 +1,6 @@
 #Provider block
 provider "aws" {
-    region = "YOUR REGION HERE"
+    region = "eu-west-1"
 }
 
 #EC2 Module Code

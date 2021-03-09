@@ -1,6 +1,9 @@
 #Provider block
 provider "aws" {
-    region = "YOUR REGION HERE"
+    region = "eu-west-1"
 }
 
 #S3 Module block
+module "s3_module" {
+  source = "./s3-module/"
+}

@@ -1,5 +1,5 @@
 #AWS Instance
-resource "aws_instance" "example" {
+resource "aws_instance" "flc_aws_instance" {
     ami = data.aws_ami.windows.id
     instance_type = "t2.micro"
     availability_zone = var.availability_zone
@@ -23,5 +23,18 @@ data "aws_ami" "windows" {
 }
 
 #EBS Volume and Attachment
+resource "aws_ebs_volume" "flc_ebs_volume" {
+  availability_zone = var.availability_zone
+  size = 4
+  tags = {
+    "Name" = "FLC Data Drive"
+  }
+}
 
+resource "aws_volume_attachment" "flc_ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id = aws_ebs_volume.flc_ebs_volume.id
+  instance_id = aws_instance.flc_aws_instance.id
+  
+}
 
